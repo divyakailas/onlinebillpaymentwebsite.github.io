@@ -102,7 +102,7 @@ if (isset($_REQUEST['LOGIN']))
 	$query = mysqli_query($con,"select * from admin where username='".$_REQUEST['username']."' &&  password='".$_REQUEST['password']."'")or die ("sql error" .mysqli_error());
 	$run_query=mysqli_fetch_array($query);
 	$total = mysqli_num_rows($query);
-	if($total>0)
+	<!--if($total>0)
 	{
 		echo "You have logged in successfully";
 		header("Location:adminhome.php");
@@ -114,7 +114,7 @@ if (isset($_REQUEST['LOGIN']))
 	}
 }
 }
-?>
+?>-->
 <section>
 
 <br><br><br>
