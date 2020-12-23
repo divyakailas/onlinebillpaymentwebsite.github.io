@@ -87,39 +87,7 @@ body {
 
 
 
-<?php
-require_once'config.php';
-$con=mysqli_connect("localhost","root","","reginsert");
-if (mysqli_connect_errno())
-  {
-  echo "could not connect to mysql " .mysqli_connect_error();
-  }
-if (isset($_REQUEST['LOGIN'])) 
-{
-    if($_REQUEST['username']=="" || $_REQUEST['password']=="")
-    {
-    echo "All fields must be filled";
-    }
-    else
-    {
 
-	$query = mysqli_query($con,"select * from reg1 where username='".$_REQUEST['username']."' &&  password='".$_REQUEST['password']."'")or die ("sql error" .mysqli_error());
-	$run_query=mysqli_fetch_array($query);
-	$total = mysqli_num_rows($query);
-	<!--if($total>0)
-	{
-		$SESSION['loguser']=$row['email'];
-		echo "You have logged in successfully";
-		header("Location:homebill.php");
-		
-	}
-	else
-	{
-		echo "Email or Password incorrect";
-	}
-}
-}
-?>-->
 <section>
 
 <br><br><br>
